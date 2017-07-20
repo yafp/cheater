@@ -1,0 +1,20 @@
+# To see usage information
+cheater
+
+# To load a specific cheatsheet
+cheater <cheatsheet-name>
+
+# To see the existing cheatsheet directories
+cheater -d
+
+# To edit a cheatsheet / or create a new one
+cheater -e <cheatsheet-name>
+
+# To list available cheatsheets
+cheater -l
+
+# To search available cheatsheets
+cheater -s <searchstring>
+
+# To get the current `cheat' version
+cheater -v

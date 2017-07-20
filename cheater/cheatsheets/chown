@@ -1,0 +1,19 @@
+# About chown
+# The command chown, an abbreviation of change owner, is used on Unix-like systems to change the owner of file system files, directories. 
+# Unprivileged (regular) users who wish to change the group membership of a file that they own may use chgrp.
+#
+# References:
+# https://en.wikipedia.org/wiki/Chown
+
+
+# Change file owner
+chown user file
+
+# Change file owner and group
+chown user:group file
+
+# Change owner recursively
+chown -R user directory
+
+# Change ownership to match another file
+chown --reference=/path/to/ref_file file

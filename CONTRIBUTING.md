@@ -12,6 +12,13 @@ Python code should conform to [PEP 8][].
 Please pattern your cheatsheets after the following:
 
 ```sh
+# About:
+# A short description about the command
+# 
+# References:
+# Optional links to code or wiki-articles
+
+
 # To extract an uncompressed archive:
 tar -xvf /path/to/foo.tar
 

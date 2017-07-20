@@ -1,0 +1,20 @@
+# About apt-cache
+# The Advanced Package Tool, or APT, is a free software user interface that works with core libraries to handle 
+# the installation and removal of software on the Debian, Slackware and other Linux distributions.
+#
+# References:
+# https://en.wikipedia.org/wiki/APT_(Debian)
+
+
+# To search for apt packages:
+apt-cache search "whatever"
+
+# To display package records for the named package(s):
+apt-cache show pkg(s)
+
+# To display reverse dependencies of a package
+apt-cache rdepends package_name
+
+# To display package versions, reverse dependencies and forward dependencies 
+# of a package
+apt-cache showpkg package_name

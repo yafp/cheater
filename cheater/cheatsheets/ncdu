@@ -1,0 +1,21 @@
+# About ncdu
+# ncdu (NCurses Disk Usage) is a disk utility for Unix systems. Its name refers to its similar purpose to the du utility, 
+# but ncdu uses a TUI under the [n]curses programming library. 
+# Users can navigate the list using the arrow keys and delete files that are taking up too much space by pressing the 'd' key. 
+# Version 1.09 and later can export the file listing in JSON format.
+#
+# References:
+# https://en.wikipedia.org/wiki/Ncdu
+
+
+# Save results to file
+ncdu -o ncdu.file
+
+# Read from file
+ncdu -f ncdu.file
+
+# Save results to compressed file 
+ncdu -o-| gzip > ncdu.file.gz
+
+# Read from compressed file
+zcat ncdu.file.gz | ncdu -f-

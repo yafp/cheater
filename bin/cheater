@@ -1,0 +1,81 @@
+#!/usr/bin/env python
+
+"""cheater - Create and view cheatsheets on the command line.
+
+Usage:
+  cheater <cheatsheet>
+  cheater -e <cheatsheet>
+  cheater -s <keyword>
+  cheater -l
+  cheater -d
+  cheater -v
+
+
+Options:
+  -d --directories  List directories on CHEATERPATH
+  -e --edit         Edit (or create) a cheatsheet
+  -l --list         List cheatsheets
+  -s --search       Search cheatsheets for <keyword>
+  -v --version      Print the version number
+  -h --help         Shows a basic help
+
+
+Examples:
+  To view the `tar` cheatsheet:
+    cheater tar
+
+  To edit (or create) the `foo` cheatsheet:
+    cheater -e foo
+
+  To list all available cheatsheets:
+    cheater -l
+
+  To search for "ssh" among all cheatsheets:
+    cheater -s ssh
+
+  To show all configured cheatsheet directories
+    cheater -d
+"""
+
+# require the dependencies
+import cheater.constants as c
+from cheater import sheets, sheet
+from cheater.utils import colorize
+from cheater.utils import debug_output
+from cheater.utils import clear_terminal
+from docopt import docopt
+
+
+if __name__ == '__main__':
+    clear_terminal()
+    debug_output(__name__, "Starting __main__")
+
+    # parse the command-line options
+    options = docopt(__doc__, version='cheater Version: 0.0.1')
+    debug_output(__name__, "____Options: "+str(options))
+
+    # list cheatsheet directories
+    if options['--directories']:
+        debug_output(__name__, "Parameter: -d")
+        print(c.FONT_BOLD +'The following cheatsheet directories are configured:\n'+c.FONT_RESET)
+        print("\n".join(sheets.paths())+'\n')
+
+    # list cheatsheets
+    elif options['--list']:
+        debug_output(__name__, "Parameter: -l")
+        print(sheets.list())
+
+    # create/edit cheatsheet
+    elif options['--edit']:
+        debug_output(__name__, "Parameter: -e")
+        sheet.create_or_edit(options['<cheatsheet>'])
+
+    # search string in all cheatsheets
+    elif options['--search']:
+        debug_output(__name__, "Parameter: -s")
+        print(colorize(sheets.search(options['<keyword>'])))
+
+    # print the cheatsheet
+    else:
+        debug_output(__name__, "Parameter: none")
+        print(colorize(sheet.read(options['<cheatsheet>'])))

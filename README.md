@@ -77,7 +77,7 @@ in the `~/.cheater/tar` file.
 Provided that you have a `CHEAT_EDITOR`, `VISUAL`, or `EDITOR` environment
 variable set, you may edit cheatsheets with:
 
-```sh
+sh
 cheater -e foo
 ```
 
@@ -85,7 +85,7 @@ If the `foo` cheatsheet already exists, it will be opened for editing.
 Otherwise, it will be created automatically.
 
 After you've customized your cheatsheets, I urge you to track `~/.cheater/` along
-with your [dotfiles][].
+with your dotfiles.
 
 
 Configuring

@@ -5,7 +5,7 @@ import os
 
 setup(
     name='cheater',
-    version='0.0.1',
+    version='0.1.20170721',
     author='Florian Poeck',
     author_email='fidel@yafp.de',
     license='GPL3',

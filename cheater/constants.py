@@ -1,19 +1,20 @@
 """constants for cheater"""
 
-
 # DEBUG
 #
-#DEBUG = False # Enable or disable debugging
-DEBUG = True # Enable or disable debugging
+DEBUG = False # Enable or disable debugging
+#DEBUG = True # Enable or disable debugging
 
 
 ## FONT FORMATTING
 FONT_BOLD = '\033[01m'
 FONT_RESET = '\033[0m'
-FONT_UNDERLINE ='\033[04m'
+FONT_UNDERLINE = '\033[04m'
 
 
 ## FONT COLORS
+# via https://stackoverflow.com/questions/287871/print-in-terminal-with-colors-using-python
+#
 # FOREGROUND
 FONT_BLACK = '\033[30m'
 FONT_BLUE = '\033[34m'

@@ -12,7 +12,7 @@ from cheater.utils import die
 
 def default_path():
     """ Returns the default cheatsheet path """
-    u.debug_output(__name__, 'Starting default_path()')
+    u.debug_output(__name__, 'Function: default_path()')
 
     # determine the default cheatsheet dir
     default_sheets_dir = os.environ.get('DEFAULT_CHEATER_DIR') or os.path.join('~', '.cheater')
@@ -29,12 +29,16 @@ def default_path():
             os.mkdir(default_sheets_dir)
 
         except OSError:
+            u.debug_output(__name__, 'Could not create default cheat dir', 2)
             die('Could not create DEFAULT_CHEATER_DIR')
 
     # assert that the DEFAULT_CHEATER_DIR is readable and writable
     if not os.access(default_sheets_dir, os.R_OK):
+        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not readable.', 2)
         die('The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not readable.')
+
     if not os.access(default_sheets_dir, os.W_OK):
+        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not writable.', 2)
         die('The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not writable.')
 
     # return the default dir
@@ -43,7 +47,7 @@ def default_path():
 
 def get():
     """ Assembles a dictionary of cheatsheets as name => file-path """
-    u.debug_output(__name__, 'Starting get()')
+    u.debug_output(__name__, 'Function: get()')
 
     cheats = {}
 
@@ -63,7 +67,7 @@ def get():
 
 def paths():
     """ Assembles a list of directories containing cheatsheets """
-    u.debug_output(__name__, 'Starting paths()')
+    u.debug_output(__name__, 'Function: paths()')
 
     sheet_paths = [
         default_path(),
@@ -77,6 +81,7 @@ def paths():
                 sheet_paths.append(path)
 
     if not sheet_paths:
+        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR dir does not exist or the CHEATERPATH is not set.', 2)
         die('The DEFAULT_CHEATER_DIR dir does not exist or the CHEATERPATH is not set.')
 
     return sheet_paths
@@ -84,7 +89,8 @@ def paths():
 
 def list():
     """ Lists the available cheatsheets """
-    u.debug_output(__name__, 'Starting list() to show all existing cheatsheets (sorted by name)')
+    u.debug_output(__name__, 'Function: list()')
+    u.debug_output(__name__, 'Going to list all existing cheatsheets (sorted by name)')
 
     sheetcounter = 0 # int variable to count amount of matches
 
@@ -102,8 +108,7 @@ def list():
     # add footer
     sheet_list = sheet_list + '\n\nFound '  + c.FONT_BOLD + c.FONT_GREEN + str(sheetcounter) + c.FONT_RESET+' cheatsheets.\n'
 
-    #clear terminal
-    u.clear_terminal()
+    u.debug_output(__name__, 'Found '+str(sheetcounter)+' cheatsheets')
 
     # return
     return sheet_list
@@ -111,42 +116,53 @@ def list():
 
 def search(term):
     """ Searches all cheatsheets for the specified term """
-    u.debug_output(__name__, 'Starting search()')
+    u.debug_output(__name__, 'Function: search()')
 
     result = '' # string variable which contains the actual result-text
+    sheetcounter = 0 # int variable to count amount of matching cheatsheets
+    linecounter = 0 # int variable to count occurences in single lines 
 
-    sheetcounter = 0 # int variable to count amount of matches
-    linecounter = 0
+    u.debug_output(__name__, 'Starting search over all cheatsheets for the term: "'+ term +'"')
 
     for cheatsheet in sorted(get().items()): # for all cheatsheets
         match = '' # string variable which later may contains the matching line
+        sheetscore = 0 # int variable to count score of each sheet
 
         for line in open(cheatsheet[1]): # check all lines of current cheatsheet
             #if term in line:
             if term.lower() in line.lower(): # search should not be case-specific
 
-                # highlight search termin in current line
-                highlight = c.FONT_BG_ORANGE + c.FONT_BLACK + term + c.FONT_RESET
-                line = line.replace(term, highlight)
+                # count how often line contains searchstring
+                sheetscore = sheetscore + line.count(term)
 
-                # attach line to match text
+                # highlight search term in current line
+                highlight = c.FONT_BG_ORANGE + c.FONT_BLACK + term + c.FONT_RESET # contruct highlighted text
+                line = line.replace(term, highlight) # replace it
+
+                # attach line to match-text
                 match += '  ' + line
 
                 # update result counter
-                linecounter = linecounter + 1 # result counter
+                linecounter = linecounter + line.count(term)
+
 
         # if we got a match - add name of related sheet and all lines which match
         if match != '':
-            # v1. Default:
-            #result += cheatsheet[0] + ":\n" + match + "\n"
-
-            # v2. Colored and including path to sheet
-            result += ' '+c.FONT_BOLD+c.FONT_BLUE+cheatsheet[0] + ':'+c.FONT_RESET+ ' ('+cheatsheet[1]+')\n' + match + '\n'
+            # Colored and including path to sheet
+            result += ' [' + c.FONT_GREEN + str(sheetscore)+ c.FONT_RESET + '] '+ \
+                c.FONT_BOLD + c.FONT_BLUE + cheatsheet[0] + ':' + \
+                c.FONT_RESET+ ' ('+ cheatsheet[1] +')\n' + \
+                match + '\n' # name of cheatsheet + complete path to cheatsheet + maching lines in cheatsheet
 
             # update sheet counter
             sheetcounter = sheetcounter + 1
 
+    u.debug_output(__name__, 'Finished search over all cheatsheets for the term: "' + term + '"')
+    u.debug_output(__name__, 'Found ' + str(linecounter) + ' matches in '+ str(sheetcounter) + ' cheatsheets')
+
     # add result footer
-    result = result + '\nYour search for '+c.FONT_BOLD+c.FONT_GREEN+term+c.FONT_RESET+' resulted in '+c.FONT_BOLD+c.FONT_GREEN+str(linecounter)+c.FONT_RESET+' matches in '+c.FONT_BOLD+c.FONT_GREEN+str(sheetcounter)+c.FONT_RESET+' cheatsheets\n\n'
+    result = result + '\n Your search for ' + c.FONT_BOLD + c.FONT_GREEN + term + c.FONT_RESET + \
+        ' resulted in ' + c.FONT_BOLD + c.FONT_GREEN + str(linecounter) + c.FONT_RESET + \
+        ' matches in ' + c.FONT_BOLD+c.FONT_GREEN + str(sheetcounter) + c.FONT_RESET + ' cheatsheets\n\n'
 
     return result

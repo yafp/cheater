@@ -2,7 +2,7 @@
 # A file archiver with highest compression ratio
 #
 # References:
-#
+# https://en.wikipedia.org/wiki/7z
 
 Args:
 a       add

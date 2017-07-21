@@ -1,3 +1,10 @@
+# About:
+# tar is a computer software utility for collecting many files into one archive file, often referred to as a tarball, for distribution or backup purposes.
+#
+# References:
+# https://en.wikipedia.org/wiki/Tar_(computing)
+
+
 # To extract an uncompressed archive:
 tar -xvf /path/to/foo.tar
 

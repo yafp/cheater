@@ -1,3 +1,11 @@
+# About unzip
+# ZIP is an archive file format that supports lossless data compression. A .ZIP file may contain one or more files or directories that may have been compressed. 
+# Unzip can be used to extract zip archives
+#
+# References:
+# https://en.wikipedia.org/wiki/Zip_(file_format) 
+
+
 # Extract archive
 unzip archive.zip
 

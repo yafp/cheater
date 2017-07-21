@@ -1,0 +1,9 @@
+# About:
+# Yet another colouriser for beautifying your logfiles or output of commands.
+#
+# References:
+# https://github.com/pengwynn/grc
+
+
+# To colorize the output of a tail on apaches error log
+grc tail -f /var/log/apache2/error.log

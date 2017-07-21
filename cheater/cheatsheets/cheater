@@ -1,8 +1,19 @@
+# About:
+# cheater is a terminal-driven cheatsheet solution. 
+#
+# References:
+# https://github.com/yafp/cheater
+
+
+
 # To see usage information
 cheater
 
-# To load a specific cheatsheet
+# To display a specific cheatsheet
 cheater <cheatsheet-name>
+
+# To display the 'cheater' cheatsheet
+cheater cheater
 
 # To see the existing cheatsheet directories
 cheater -d

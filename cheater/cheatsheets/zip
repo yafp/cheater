@@ -1,3 +1,10 @@
+# About zip
+#
+#
+# References:
+#
+
+
 # Create zip file
 zip archive.zip file1 directory/
 

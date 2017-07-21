@@ -1,3 +1,16 @@
+# About ping
+# ping is a computer network administration software utility used to test the reachability of a host on an Internet Protocol (IP) network. 
+# It measures the round-trip time for messages sent from the originating host to a destination computer that are echoed back to the source. 
+# The name comes from active sonar terminology that sends a pulse of sound and listens for the echo to detect objects under water, 
+# although it is sometimes interpreted as a backronym to packet Internet groper.
+#
+# References:
+# https://en.wikipedia.org/wiki/Ping_(networking_utility)
+
+
+# ping continuously
+ping example.com
+
 # ping a host with a total count of 15 packets overall.    
 ping -c 15 www.example.com
 

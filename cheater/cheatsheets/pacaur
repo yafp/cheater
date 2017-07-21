@@ -1,0 +1,10 @@
+# About:
+# Pacaur is an Arch User Repository (AUR) helper aiming at speed and simplicity and is designed to minimize user prompt interaction.
+#
+# References:
+# https://github.com/rmarquis/pacaur
+
+
+# To update all pacaur packages
+pacaur -Syu
+

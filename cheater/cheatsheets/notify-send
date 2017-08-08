@@ -1,4 +1,18 @@
+# About notify-send
+# a program to send desktop notifications
+# With notify-send you can send desktop notifications to the user 
+# via a notification daemon from the command line. 
+# These notifications can be used to inform the user about an event or display 
+# some form of information without getting in the user’s way.
+#
+# References:
+# https://man.cx/notify-send
+
+
 # To send a desktop notification via dbus:
 notify-send -i 'icon-file/name' -a 'application_name' 'summary' 'body of message'
+
+# To send a desktop notification showing the output of a tail command
+notify-send test "`tail /var/log/syslog`"
 
 # The -i and -a flags can be omitted if unneeded.

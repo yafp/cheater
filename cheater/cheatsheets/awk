@@ -1,3 +1,12 @@
+# About awk
+# AWK is a programming language designed for text processing and typically 
+# used as a data extraction and reporting tool. 
+# It is a standard feature of most Unix-like operating systems.
+#
+# References:
+# https://en.wikipedia.org/wiki/AWK
+
+
 # sum integers from a file or stdin, one integer per line:
 printf '1\n2\n3\n' | awk '{ sum += $1} END {print sum}'
 

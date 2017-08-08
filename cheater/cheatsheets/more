@@ -1,3 +1,19 @@
+# About more
+# In computing, more is a command to view (but not modify) the contents of a 
+# text file one screen at a time. 
+# It is available on Unix and Unix-like systems, DOS, OS/2, and Microsoft 
+# Windows. 
+# Programs of this sort are called pagers. more is a very basic pager, 
+# originally allowing only forward navigation through a file, though newer 
+# implementations do allow for limited backward movement.
+#
+# References:
+# https://en.wikipedia.org/wiki/More_(command)
+
+
+# To show the file
+more /path/to/file
+
 # To show the file start at line number 5
-more +5 file
+more +5 /path/to/file
 

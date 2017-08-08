@@ -1,3 +1,17 @@
+# About screen
+# GNU Screen is a terminal multiplexer, a software application that can be used
+# to multiplex several virtual consoles, allowing a user to access multiple
+# separate login sessions inside a single terminal window, or detach and
+# reattach sessions from a terminal. 
+# It is useful for dealing with multiple programs from a command line interface,
+# and for separating programs from the session of the Unix shell that started
+# the program, particularly so a remote process continues running even when the
+# user is disconnected.
+#
+# References:
+# https://en.wikipedia.org/wiki/GNU_Screen
+
+
 # Start a new named screen session:
 screen -S session_name
 

@@ -1,3 +1,14 @@
+# About top
+# top (table of processes) is a task manager program found in many Unix-like operating systems. 
+# It produces an ordered list of running processes selected by user-specified criteria, and updates it periodically. 
+# Default ordering is by CPU usage, and only the top CPU consumers are shown. 
+# top shows how much processing power and memory are being used, as well as other information about the running processes. 
+# Some versions of top allow extensive customization of the display, such as choice of columns or sorting method.
+#
+# References:
+# https://en.wikipedia.org/wiki/Top_(software)
+
+
 # Update every <interval> samples:
 top -i <interval>
 

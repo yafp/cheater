@@ -1,0 +1,24 @@
+# About wc
+# wc (short for word count) is a command in Unix-like operating systems.
+#
+# References:
+# https://en.wikipedia.org/wiki/Wc_(Unix)
+
+
+# Count all words in a file /home/foo/bar.sh
+wc /home/foo/bar.sh
+
+# Print the byte count
+wc -c /home/foo/bar.sh
+
+# Print the line count
+wc -l /home/foo/bar.sh
+
+# Print the character count
+wc -m /home/foo/bar.sh
+
+# Print the length og longest line
+wc -L /home/foo/bar.sh
+
+# Print the word count
+wc -w /home/foo/bar.sh

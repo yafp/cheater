@@ -1,8 +1,23 @@
+# About find
+# In Unix-like and some other operating systems, find is a command-line utility that searches 
+# one or more directory trees of a file system, locates files based on some user-specified criteria 
+# and applies a user-specified action on each matched file. 
+# The possible search criteria include a pattern to match against the filename or a time range to match against 
+# the modification time or access time of the file. 
+# By default, find returns a list of all files below the current working directory.
+#
+# References:
+# https://en.wikipedia.org/wiki/Find
+
+
 # To find files by case-insensitive extension (ex: .jpg, .JPG, .jpG):
 find . -iname "*.jpg"
 
 # To find directories:
 find . -type d
+
+# To find directories with a defined name:
+find /path/to/look -name "dir-name"
 
 # To find files:
 find . -type f

@@ -1,2 +1,8 @@
-# Concatenate all pdf files into one:
+# About sam2p
+# program to convert raster images to PostScript, PDF, and other formats
+#
+# References:
+#
+
+# Concatenate/merge all pdf files into one single file:
 sam2p *.pdf out.pdf

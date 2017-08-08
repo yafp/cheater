@@ -1,3 +1,11 @@
+# About csplit
+# The csplit command in Unix is a utility that is used to split a file into 
+# two or more smaller files determined by context lines.
+#
+# References:
+# https://en.wikipedia.org/wiki/Csplit
+
+
 # Split a file based on pattern
 csplit input.file '/PATTERN/'
 

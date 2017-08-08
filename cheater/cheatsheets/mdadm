@@ -1,3 +1,12 @@
+# About mdadm
+# mdadm is a GNU/Linux utility used to manage and monitor software RAID devices.
+# It is used in modern GNU/Linux distributions in place of older software 
+# RAID utilities such as raidtools2 or raidtools
+#
+# References:
+# https://en.wikipedia.org/wiki/Mdadm
+
+
 # For the sake of briefness, we use Bash  "group compound" stanza:
 #   /dev/sd{a,b,...}1 => /dev/sda1 /dev/sdb1 ...
 # Along the following variables:

@@ -1,2 +1,12 @@
+# About popd
+# In computing, pushd and popd are commands used to work with the command line 
+# directory stack. They are available on command line interpreters for 
+# DOS, Microsoft Windows and Unix-like operating systems, 
+# such as 4DOS, Bash, Command Prompt and Windows Powershell.
+#
+# References:
+# https://en.wikipedia.org/wiki/Pushd_and_popd
+
+
 # Returns to the directory at the top of the `pushd' stack
 popd

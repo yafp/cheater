@@ -1,3 +1,13 @@
+# About aptitude
+# aptitude is a front-end to dpkg, the Debian package management tool. 
+# It displays a list of software packages and allows the user to interactively pick packages to install or remove. 
+# It has an especially powerful search system utilizing flexible search patterns. 
+# It was initially created for Debian, but has appeared in RPM Package Manager (RPM) based distributions as well (such as Conectiva).
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Aptitude_(software)
+
+
 # To search for packages:
 aptitude search "whatever"
 

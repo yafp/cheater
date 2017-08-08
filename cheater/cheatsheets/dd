@@ -1,3 +1,10 @@
+# About dd
+# dd is a command-line utility for Unix and Unix-like operating systems whose primary purpose is to convert and copy files.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Dd_(Unix)
+
+
 # Read from {/dev/urandom} 2*512 Bytes and put it into {/tmp/test.txt}
 # Note: At the first iteration, we read 512 Bytes.
 # Note: At the second iteration, we read 512 Bytes.

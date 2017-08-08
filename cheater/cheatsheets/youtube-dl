@@ -1,3 +1,13 @@
+# About youtube-dl
+# youtube-dl is a command-line utility for downloading videos or extracting 
+# audio files from streaming websites such as YouTube, Dailymotion, and Vimeo.
+# The software is written using Python. 
+#
+# References:
+# https://en.wikipedia.org/wiki/Youtube-dl
+# http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs (For all video format)
+
+
 # To download a video in 720p MP4:
 youtube-dl -f 22 example.com/watch?v=id
 
@@ -15,6 +25,3 @@ youtube-dl --playlist-start 5 example.com/watch?v=id&list=listid
 
 # To simulate a download with youtube-dl:
 youtube-dl -s example.com/watch?v=id
-
-# For all video formats see
-# http://en.wikipedia.org/wiki/YouTube#Quality_and_codecs

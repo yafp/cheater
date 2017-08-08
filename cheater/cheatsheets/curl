@@ -1,5 +1,20 @@
+# About cURL
+# cURL is a computer software project providing a library and command-line tool for transferring data using various protocols. 
+# The cURL project produces two products, libcurl and cURL. 
+# It was first released in 1997. The name originally stood for "see URL".
+#
+# Reference:
+# https://en.wikipedia.org/wiki/CURL
+
+
 # Download a single file
 curl http://path.to.the/file
+
+# Download a single file with verbose output
+curl -v http://path.to.the/file
+
+# Download a single file and hide progress
+curl -s http://path.to.the/file
 
 # Download a file and specify a new filename
 curl http://example.com/file.zip -o new_file.zip
@@ -33,3 +48,7 @@ curl http://ifconfig.me/all/json
 
 # Limit the rate of a download
 curl --limit-rate 1000B -O http://path.to.the/file
+
+# Get geo location for an ip address
+curl ipinfo.io/23.66.166.151
+

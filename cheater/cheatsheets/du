@@ -1,3 +1,10 @@
+# About du
+# du (abbreviated from disk usage) is a standard Unix program used to estimate file space usage—space used under a particular directory or files on a file system.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Du_(Unix)
+
+
 # To sort directories/files by size
 du -sk *| sort -rn
 

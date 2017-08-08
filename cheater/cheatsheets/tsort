@@ -1,0 +1,8 @@
+# About tsort
+# The tsort program is a command line utility on Unix-like platforms, that performs a topological sort on its input.
+# 
+# References:
+# https://en.wikipedia.org/wiki/Tsort
+
+# Sort
+tsort /path/to/source.file

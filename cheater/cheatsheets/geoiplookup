@@ -1,0 +1,10 @@
+# About geoiplookup
+# geoiplookup tool which is a command-line client for MaxMind's GeoIP databases. 
+# geoiplookup allows you to look up the geography or network information of an IP address (or hostname). 
+
+
+# To look up geo informations for ip 23.66.166.151
+geoiplookup 23.66.166.151
+
+# To look up geo ip informations for a hostname
+geoiplookup google.com

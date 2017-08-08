@@ -1,3 +1,12 @@
+# About dpkg
+# dpkg is the software at the base of the package management system in the free 
+# operating system Debian and its numerous derivatives. 
+# dpkg is used to install, remove, and provide information about .deb packages.
+#
+# References:
+# https://en.wikipedia.org/wiki/Dpkg
+
+
 # Install the package or upgrade it
 dpkg -i test.deb
 

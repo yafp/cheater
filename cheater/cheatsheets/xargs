@@ -1,3 +1,12 @@
+# About xargs
+# xargs is a command on Unix and most Unix-like operating systems used to build and execute command lines from standard input. 
+# Commands such as grep and awk can accept the standard input as a parameter, or argument by using a pipe. 
+# However, others such as cp and echo disregard the standard input stream and rely solely on the arguments found after the command.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Xargs
+
+
 # find all file name ending with .pdf and remove them
 find -name *.pdf | xargs rm -rf
 

@@ -1,4 +1,17 @@
-# Desc: Python is a high-level programming language.
+# About python
+# Python is a widely used high-level programming language for general-purpose 
+# programming, created by Guido van Rossum and first released in 1991. 
+# An interpreted language, Python has a design philosophy that emphasizes code 
+# readability (notably using whitespace indentation to delimit code blocks 
+# rather than curly brackets or keywords), and a syntax that allows programmers 
+# to express concepts in fewer lines of code than might be used in languages 
+# such as C++ or Java. 
+# The language provides constructs intended to enable writing clear programs 
+# on both a small and large scale.
+#
+# References:
+# https://en.wikipedia.org/wiki/Python_(programming_language)
+
 
 # Basic example of server with python
 # Will start a Web Server in the current directory on port 8000
@@ -6,6 +19,7 @@
 
 # Python v2.7
 python -m SimpleHTTPServer
+
 # Python 3
 python -m http.server 8000
 

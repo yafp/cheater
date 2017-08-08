@@ -1,2 +1,11 @@
+# About cut
+# In computing, cut is a Unix command line utility which is used to extract 
+# sections from each line of input — usually from a file. 
+# It is currently part of the GNU coreutils package and the BSD Base System.
+#
+# References:
+# https://en.wikipedia.org/wiki/Cut_(Unix)
+
+
 # To cut out the third field of text or stdoutput that is delimited by a #:
 cut -d# -f3

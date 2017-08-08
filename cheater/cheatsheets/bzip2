@@ -1,3 +1,12 @@
+# About bzip2
+# bzip2 is a free and open-source file compression program that uses the 
+# Burrows–Wheeler algorithm. 
+# It only compresses single files and is not a file archiver.
+#
+# References:
+# https://en.wikipedia.org/wiki/Bzip2
+
+
 # compress foo -> foo.bz2
 bzip2 -z foo
 

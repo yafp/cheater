@@ -1,3 +1,12 @@
+# About man
+# A man page (short for manual page) is a form of software documentation usually found on a Unix or Unix-like operating system. 
+# Topics covered include computer programs (including library and system calls), formal standards and conventions, and even abstract concepts. 
+# A user may invoke a man page by issuing the man command.
+#
+# References:
+# https://en.wikipedia.org/wiki/Man_page
+
+
 # Convert a man page to pdf
 man -t bash | ps2pdf - bash.pdf
 

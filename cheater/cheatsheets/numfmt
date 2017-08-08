@@ -1,2 +1,9 @@
+# About numfmt
+# Convert numbers from/to human-readable strings
+#
+# References:
+#
+
+
 # Convert bytes to Human readable format
 numfmt --to=iec --suffix=B --padding=7 1048576

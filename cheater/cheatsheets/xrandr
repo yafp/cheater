@@ -1,3 +1,12 @@
+# About xrandr
+# RandR ("resize and rotate") is a communications protocol written as an extension to the X11 protocol. 
+# XRandR provides the ability to resize, rotate and reflect the root window of a screen. 
+# RandR is also responsible for setting the screen refresh rate.
+#
+# References:
+# https://en.wikipedia.org/wiki/RandR
+
+
 # To enable HDMI2 output with maximal resolution:
 xrandr --output HDMI2 --auto
 

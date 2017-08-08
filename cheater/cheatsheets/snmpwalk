@@ -1,3 +1,10 @@
+# About snmpwalk
+# retrieve a subtree of management values using SNMP GETNEXT requests.
+#
+# References:
+#
+
+
 # To retrieve all of the variables under system for host zeus
 snmpwalk -Os -c public -v 1 zeus system
 

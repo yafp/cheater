@@ -1,5 +1,15 @@
-# TCPDump is a packet analyzer. It allows the user to intercept and display TCP/IP
-# and other packets being transmitted or received over a network. (cf Wikipedia).
+# About tcpdump
+# tcpdump is a common packet analyzer that runs under the command line. 
+# It allows the user to display TCP/IP and other packets being transmitted or received over a network to which the computer is attached. 
+# Distributed under the BSD license, tcpdump is free software.
+# Tcpdump works on most Unix-like operating systems: Linux, Solaris, BSD, macOS, HP-UX, Android and AIX among others. 
+# In those systems, tcpdump uses the libpcap library to capture packets. 
+# The port of tcpdump for Windows is called WinDump; it uses WinPcap, the Windows port of libpcap.
+#
+# References:
+# https://en.wikipedia.org/wiki/Tcpdump
+
+
 # Note: 173.194.40.120 => google.com
 
 # Intercepts all packets on eth0

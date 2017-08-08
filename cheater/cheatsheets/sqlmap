@@ -1,3 +1,12 @@
+# About sqlmap
+# Sqlmap is an open source software that is used to detect and exploit database vulnerabilities and provides options for injecting malicious code into them.
+#
+# References:
+# https://en.wikipedia.org/wiki/Sqlmap
+# http://sqlmap.org/
+# https://github.com/sqlmapproject/sqlmap
+
+
 # Test URL and POST data and return database banner (if possible)
 ./sqlmap.py --url="<url>" --data="<post-data>" --banner
 

@@ -1,3 +1,13 @@
+# About ffmpeg
+# FFmpeg is a free software project that produces libraries and programs for handling multimedia data. 
+# FFmpeg includes libavcodec, an audio/video codec library used by several other projects, libavformat (Lavf),
+# an audio/video container mux and demux library, 
+# and the ffmpeg command line program for transcoding multimedia files.
+#
+# References:
+# https://en.wikipedia.org/wiki/FFmpeg
+
+
 # Print file metadata etc.
 ffmpeg -i path/to/file.ext
 

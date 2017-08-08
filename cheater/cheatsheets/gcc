@@ -1,3 +1,13 @@
+# About gcc
+# The GNU Compiler Collection (GCC) is a compiler system produced by the 
+# GNU Project supporting various programming languages. 
+# GCC is a key component of the GNU toolchain and the standard compiler
+# for most Unix-like Operating Systems. 
+#
+# References:
+# https://en.wikipedia.org/wiki/GNU_Compiler_Collection
+
+
 # Compile a file
 gcc file.c
 

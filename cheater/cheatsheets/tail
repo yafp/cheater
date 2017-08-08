@@ -1,3 +1,10 @@
+# About tail
+# tail is a program on Unix and Unix-like systems used to display the tail end of a text file or piped data.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Tail_(Unix)
+
+
 # To show the last 10 lines of file
 tail file
 
@@ -11,4 +18,5 @@ tail -n +N file
 tail -c N file
 
 # To show the last 10 lines of file and to wait for file to grow
+# Updates itself
 tail -f file

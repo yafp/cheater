@@ -1,3 +1,12 @@
+# About ps
+# In most Unix-like operating systems, the ps program (short for "process status") displays the currently-running processes. 
+# A related Unix utility named top provides a real-time view of the running processes.
+# In Windows PowerShell, ps is a predefined command alias for the Get-Process cmdlet, which essentially serves the same purpose.
+#
+# References:
+# https://en.wikipedia.org/wiki/Ps_(Unix)
+
+
 # To list every process on the system:
 ps aux
 

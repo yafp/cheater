@@ -1,3 +1,13 @@
+# About CUPS
+# CUPS (formerly an acronym for Common UNIX Printing System) is a modular printing system for Unix-like computer operating systems 
+# which allows a computer to act as a print server. 
+# A computer running CUPS is a host that can accept print jobs from client computers, 
+# process them, and send them to the appropriate printer.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/CUPS
+
+
 # Manage printers through CUPS:
 http://localhost:631 (in web browser)
 

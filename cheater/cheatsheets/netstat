@@ -1,3 +1,12 @@
+# About netstat
+# In computing, netstat (network statistics) is a command-line network utility tool that displays network connections for the Transmission Control Protocol (both incoming and outgoing), 
+# routing tables, and a number of network interface (network interface controller or software-defined network interface) and network protocol statistics. 
+# It is available on Unix-like operating systems including macOS, Linux, Solaris, and BSD, 
+# and is available on Windows NT-based operating systems including Windows XP, Windows Vista, Windows 7, Windows 8 and Windows 10.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Netstat
+
 # WARNING ! netstat is deprecated. Look below.
 
 # To view which users/processes are listening to which ports:

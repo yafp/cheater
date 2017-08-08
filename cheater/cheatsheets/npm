@@ -1,3 +1,13 @@
+# About npm
+# npm is a package manager for the JavaScript programming language. 
+# It is the default package manager for the JavaScript runtime environment Node.js. 
+# It consists of a command line client, also called npm, and an online database of public packages, called the npm registry. 
+# The registry is accessed via the client, and the available packages can be browsed and searched via the npm website.
+#
+# References: 
+# https://en.wikipedia.org/wiki/Npm_(software)
+
+
 # Every command shown here can be used with the `-g` switch for global scope
 
 # Install a package in the current directory

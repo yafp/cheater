@@ -1,3 +1,10 @@
+# About shred
+# overwrite a file to hide its contents, and optionally delete it
+#
+# References:
+# https://en.wikipedia.org/wiki/Shred_(Unix)
+
+
 # To shred a file (5 passes) and verbose output:
 shred -n 5 -v file.txt
 

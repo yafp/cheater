@@ -1,3 +1,12 @@
+# About cron/crontab
+# The software utility Cron is a time-based job scheduler in Unix-like computer operating systems. 
+# People who set up and maintain software environments use cron to schedule jobs (commands or shell scripts) to run periodically at fixed times, dates, or intervals. 
+# It typically automates system maintenance or administration—though its general-purpose nature makes it useful for things like downloading files from the Internet and downloading email at regular intervals. 
+#
+# Reference: 
+# https://en.wikipedia.org/wiki/Cron
+
+
 # set a shell
 SHELL=/bin/bash
 
@@ -20,3 +29,18 @@ SHELL=/bin/bash
 
 # every Saturday at 8:05 AM
 5 8 * * 6 /home/user/command.sh
+
+# Run once an hour at the beginning of the hour (check @hourly)
+0 * * * * /home/user/command.sh
+
+# Run once a day at midnight (check daily)
+0 0 * * * /home/user/command.sh
+
+# Run once a week at midnight on Sunday morning (check @weekly)
+0 0 * * 0 /home/user/command.sh
+
+# Run once a month at midnight of the first day of the month (@monthly)
+0 0 1 * * /home/user/command.sh
+
+# Run once a year at midnight of 1 January (check @yearly)
+0 0 1 1 * /home/user/command.sh

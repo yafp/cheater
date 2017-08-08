@@ -1,3 +1,15 @@
+# About ln
+# The ln command is a standard Unix command utility used to create a hard link 
+# or a symbolic link (symlink) to an existing file.
+# The use of a hard link allows multiple filenames to be associated with the 
+# same file since a hard link points to the inode of a given file, the data of 
+# which is stored on disk. 
+# On the other hand, symbolic links are special files that refer to other 
+# files by name.
+#
+# References:
+# https://en.wikipedia.org/wiki/Ln_(Unix)
+
 # To create a symlink:
 ln -s path/to/the/target/directory name-of-symlink
 

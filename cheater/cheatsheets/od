@@ -1,3 +1,13 @@
+# About od
+# od is a program for displaying ("dumping") data in various human-readable output formats. 
+# The name is an acronym for "octal dump" since it defaults to printing in the octal data format. 
+# It can also display output in a variety of other formats, including hexadecimal, decimal, and ASCII. 
+# It is useful for visualizing data that is not in a human-readable format, like the executable code of a program.
+#
+# References:
+# https://en.wikipedia.org/wiki/Od_(Unix)
+
+
 # Dump file in octal format
 od /path/to/binaryfile
 od -o /path/to/binaryfile

@@ -1,3 +1,14 @@
+# About tee
+# In computing, tee is a command in command-line interpreters (shells) using standard streams 
+# which reads standard input and writes it to both standard output and one or more files, 
+# effectively duplicating its input.
+# It is primarily used in conjunction with pipes and filters. 
+# The command is named after the T-splitter used in plumbing.
+#
+# References:
+# https://en.wikipedia.org/wiki/Tee_(command)
+
+
 # To tee stdout to a file:
 ls | tee outfile.txt
 

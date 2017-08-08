@@ -1,3 +1,13 @@
+# About mkdir
+# The mkdir (make directory) command in the Unix, DOS, OS/2, and Microsoft 
+# Windows operating systems and in the PHP scripting language is used to make 
+# a new directory. 
+# In DOS, OS/2 and Windows, the command is often abbreviated to md.
+#
+# References:
+# https://en.wikipedia.org/wiki/Mkdir
+
+
 # Create a directory and all its parents
 mkdir -p foo/bar/baz
 

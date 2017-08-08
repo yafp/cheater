@@ -1,2 +1,12 @@
+# About su
+# The Unix command su, sometimes described as substitute user, super user, or switch user, is used by a computer user to execute commands with the privileges of another user account. 
+# When executed it invokes a shell without changing the current working directory or the user environment.
+# When the command is used without specifying the new user id as a command line argument, 
+# it defaults to using the superuser account (user id 0) of the system.
+#
+# References:
+# https://en.wikipedia.org/wiki/Su_(Unix)
+
+
 # Switch to another user account
 su USERNAME

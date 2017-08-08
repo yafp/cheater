@@ -1,3 +1,14 @@
+# About grep
+# grep is a command-line utility for searching plain-text data sets for lines 
+# that match a regular expression. Its name comes from the ed command g/re/p 
+# (globally search a regular expression and print), which has the same effect: 
+# doing a global search with the regular expression and printing all matching 
+# lines.
+#
+# References:
+# https://en.wikipedia.org/wiki/Grep
+
+
 # Search a file for a pattern
 grep pattern file
 

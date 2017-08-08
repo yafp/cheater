@@ -1,3 +1,12 @@
+# About aria2c
+# aria2 is a lightweight multi-protocol & multi-source, cross platform download 
+# utility operated in command-line. It supports HTTP/HTTPS, FTP, SFTP, 
+# BitTorrent and Metalink.
+#
+# References:
+# https://github.com/aria2/aria2
+
+
 # Just download a file
 # The url can be a http(s), ftp, .torrent file or even a magnet link
 aria2c <url>

@@ -1,8 +1,11 @@
 # About yum
-# The Yellowdog Updater, Modified (yum) is an open-source command-line package-management utility for computers running the Linux operating system using the RPM Package Manager
+# The Yellowdog Updater, Modified (yum) is an open-source command-line package-
+# management utility for computers running the Linux operating system using 
+# the RPM Package Manager
 #
 # References:
 # https://en.wikipedia.org/wiki/Yum_(.rpm)
+
 
 # To install the latest version of a package:
 yum install <package name>
@@ -33,5 +36,4 @@ yum list <package_name_or_word_to_search>
  
 # To download the source RPM for a package:
 yumdownloader --source <package name>
-
-# (You have to install yumdownloader first, which is installed by the yum-utils package)
+# yum-utils package contains: yumdownloader)

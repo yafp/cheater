@@ -1,2 +1,11 @@
+# About df
+# df (abbreviation for disk free) is a standard Unix command used to display the amount of available disk space for file systems 
+# on which the invoking user has appropriate read access. 
+# df is typically implemented using the statfs or statvfs system calls.
+#
+# References:
+# https://en.wikipedia.org/wiki/Df_(Unix)
+
+
 # Printout disk free space in a human readable format
 df -h

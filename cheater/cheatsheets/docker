@@ -1,3 +1,12 @@
+# About docker
+# Docker is a software technology providing containers, promoted by the company 
+# Docker, Inc. Docker provides an additional layer of abstraction and 
+# automation of operating-system-level virtualization on Windows and Linux.
+#
+# References:
+# https://en.wikipedia.org/wiki/Docker_(software)
+
+
 # Start docker daemon
 docker -d
 

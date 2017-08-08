@@ -1,3 +1,14 @@
+# About stdout
+# Standard output is the stream where a program writes its output data. 
+# The program requests data transfer with the write operation. 
+# Not all programs generate output. 
+# For example, the file rename command (variously called mv, move, or ren) is silent on success.
+# Unless redirected, standard output is the text terminal which initiated the program.
+#
+# References:
+# https://en.wikipedia.org/wiki/Standard_streams#Standard_output_.28stdout.29
+
+
 # To redirect stderr to stdout:
 some-command 2>&1
 

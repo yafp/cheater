@@ -1,3 +1,11 @@
+# About git
+# Git (/ɡɪt) is a version control system (VCS) for tracking changes in computer 
+# files and coordinating work on those files among multiple people.
+#
+# References:
+# https://en.wikipedia.org/wiki/Git
+
+
 # To set your identity:
 git config --global user.name "John Doe"
 git config --global user.email johndoe@example.com

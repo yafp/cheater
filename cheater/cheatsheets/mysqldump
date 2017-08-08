@@ -1,3 +1,12 @@
+# About mysqldump
+# A database dump (also: SQL dump) contains a record of the table structure and/or the data from a database and is usually in the form of a list of SQL statements. 
+# A database dump is most often used for backing up a database so that its contents can be restored in the event of data loss. 
+# Corrupted databases can often be recovered by analysis of the dump. 
+#
+# Reference: 
+# https://en.wikipedia.org/wiki/Database_dump
+
+
 # To dump a database to a file (Note that your password will appear in your command history!):
 mysqldump -uusername -ppassword the-database > db.sql
 

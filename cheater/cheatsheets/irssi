@@ -1,3 +1,11 @@
+# About irssi
+# Irssi is an IRC client program for Linux, FreeBSD, Mac OS X and 
+# Microsoft Windows. 
+#
+# References:
+# https://en.wikipedia.org/wiki/Irssi
+
+
 # To connect to an IRC server
 /connect <server domain name>
 

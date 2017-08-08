@@ -1,3 +1,12 @@
+# About gdb
+# The GNU Debugger (GDB) is a portable debugger that runs on many Unix-like 
+# systems and works for many programming languages, including 
+# Ada, C, C++, Objective-C, Free Pascal, Fortran, Java and partially others.
+#
+# References:
+# https://en.wikipedia.org/wiki/GNU_Debugger
+
+
 # start the debugger
 gdb your-executable
 
@@ -11,14 +20,19 @@ r, run
 
 # run the current line, stepping over any invocations
 n, next
+
 # run the current line, stepping into any invocations
 s, step
+
 # print a stacktrace
 bt, backtrace
+
 # evaluate an expression and print the result
 p length=strlen(string)
+
 # list surrounding source code
 l, list
+
 # continue execution
 c, continue
 

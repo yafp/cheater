@@ -1,3 +1,12 @@
+# About systemctl
+# systemd is an init system used in Linux distributions to bootstrap the user space and manage all processes subsequently, instead of the UNIX System V or Berkeley Software Distribution (BSD) init systems. 
+# It is published as free and open-source software under the terms of the GNU Lesser General Public License (LGPL) version 2.1 or later.
+# The software has as one of its main goals the unification of basic Linux configurations and service behaviors across all distributions
+#
+# References:
+# https://en.wikipedia.org/wiki/Systemd
+
+
 # List all loaded/active units
 systemctl list-units
 

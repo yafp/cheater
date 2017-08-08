@@ -1,3 +1,16 @@
+# About rm
+# rm (short for remove) is a basic UNIX command used to remove objects such as 
+# files, directories, device nodes, symbolic links, and so on from the filesystem. 
+# To be more precise, rm removes references to objects from the filesystem, 
+# where those objects might have had multiple references (for example, a file 
+# with two different names), and the objects themselves are discarded only 
+# when all references have been removed and no programs still have open handles 
+# to the objects.
+#
+# References:
+# https://en.wikipedia.org/wiki/Rm_(Unix)
+
+
 # Remove files and subdirs
 rm -rf path/to/the/target/
 

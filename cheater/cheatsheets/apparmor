@@ -1,4 +1,14 @@
-# Desc: Apparmor will protect the system by confining programs to a limited set of resources.
+# About AppArmor
+# AppArmor is a Linux kernel security module that allows the system 
+# administrator to restrict programs' capabilities with per-program profiles. 
+# Profiles can allow capabilities like network access, raw socket access, and 
+# the permission to read, write, or execute files on matching paths. AppArmor 
+# supplements the traditional Unix discretionary access control (DAC) model by 
+# providing mandatory access control (MAC).
+#
+# References:
+# https://en.wikipedia.org/wiki/AppArmor
+
 
 # To activate a profile:
 sudo aa-enforce usr.bin.firefox

@@ -1,3 +1,12 @@
+# About tr
+# tr is a command in Unix-like operating systems. 
+# It is an abbreviation of translate or transliterate, indicating its operation of replacing or removing 
+# specific characters in its input data set.
+#
+# References:
+# https://en.wikipedia.org/wiki/Tr_(Unix)
+
+
 #replace : with new line
 echo $PATH|tr ":" "\n" #equivalent with:
 echo $PATH|tr -t ":" \n 

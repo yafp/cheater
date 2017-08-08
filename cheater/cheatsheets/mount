@@ -1,3 +1,13 @@
+# About mount
+# Before a user can access a file on a Unix-like machine, the file system that
+# contains it needs to be mounted with the mount command.
+# Frequently mount is used for SD card, USB storage, DVD and other
+# removable storage devices.
+#
+# References:
+# https://en.wikipedia.org/wiki/Mount_(Unix)
+
+
 # To mount / partition as read-write in repair mode:
 mount -o remount,rw /
 

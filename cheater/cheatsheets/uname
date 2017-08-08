@@ -1,3 +1,12 @@
+# About uname
+# uname (short for unix name) is a computer program in Unix and Unix-like computer operating systems that prints the name, 
+# version and other details about the current machine and the operating system running on it. 
+# The uname system call and command appeared for the first time in PWB/UNIX. Both are specified by POSIX.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Uname
+
+
 # Print all system information
 uname -a
 # Linux system-hostname 3.2.0-4-amd64 #1 SMP Debian 3.2.32-1 x86_64 GNU/Linux

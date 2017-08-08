@@ -1,3 +1,13 @@
+# About scp
+# Secure copy or SCP is a means of securely transferring computer files between
+# a local host and a remote host or between two remote hosts.
+# It is based on the Secure Shell (SSH) protocol.
+# "SCP" commonly refers to both the Secure Copy Protocol and the program itself.
+#
+# References:
+# https://en.wikipedia.org/wiki/Secure_copy
+
+
 # To copy a file from your local machine to a remote server:
 scp foo.txt user@example.com:remote/dir
 

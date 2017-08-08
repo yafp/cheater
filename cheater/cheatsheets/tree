@@ -1,3 +1,23 @@
+# About tree
+# In Unix and Unix-like systems, as well as MS-DOS and Microsoft Windows, tree is a recursive directory listing program that produces a depth-indented listing of files.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Tree_(Unix)
+
+
+# Basic example with output
+tree path/to/folder/
+
+path/to/folder/
+├── a-first.html
+├── b-second.txt
+├── subfolder
+│   ├── readme.txt
+│   ├── code.cpp
+│   └── code.h
+└── z-last-file.txt
+
+
 # To display a recursive directory tree
 tree
 

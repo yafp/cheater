@@ -1,3 +1,11 @@
+# About head
+# head is a program on Unix and Unix-like systems used to display the beginning 
+# of a text file or piped data.
+#
+# References:
+# https://en.wikipedia.org/wiki/Head_(Unix)
+
+
 # To show the first 10 lines of file
 head file
 

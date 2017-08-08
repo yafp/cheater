@@ -1,3 +1,11 @@
+# About ssh
+# Secure Shell (SSH) is a cryptographic network protocol for operating network services securely over an unsecured network.
+# The best known example application is for remote login to computer systems by users.
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Secure_Shell
+
+
 # To ssh via pem file (which normally needs 0600 permissions):
 ssh -i /path/to/file.pem user@example.com
 

@@ -7,3 +7,6 @@
 
 # To colorize the output of a tail on apaches error log
 grc tail -f /var/log/apache2/error.log
+
+# To colorize the output of ls
+grc ls -la

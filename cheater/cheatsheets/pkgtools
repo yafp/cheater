@@ -1,6 +1,6 @@
 # Create a Slackware package from a structured directory and sub-tree
-$ cd /path/to/pkg/dir
-$ su - c 'makepkg --linkadd y --chown n $foo-1.0.3-x86_64-1_tag.tgz'
+cd /path/to/pkg/dir
+su - c 'makepkg --linkadd y --chown n $foo-1.0.3-x86_64-1_tag.tgz'
 
 
 # Install a Slackware package

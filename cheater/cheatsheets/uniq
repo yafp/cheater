@@ -1,3 +1,10 @@
+# About uniq
+# uniq is a Unix utility which, when fed a text file, outputs the file with adjacent identical lines collapsed to one
+#
+# Reference:
+# https://en.wikipedia.org/wiki/Uniq
+
+
 # show all lines without duplication
 # `sort -u` and `uniq` is the same effect.
 sort file | uniq

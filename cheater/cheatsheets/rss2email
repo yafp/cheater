@@ -1,4 +1,9 @@
-'rss2email -- converts rss feeds and emails them to your inbox'
+# About rss2email
+# converts rss feeds and emails them to your inbox
+#
+# References:
+#
+
 
 # List all feeds 
 r2e list

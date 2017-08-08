@@ -1,3 +1,10 @@
+# About convert
+#
+#
+# Reference:
+#
+
+
 # To resize an image to a fixed width and proportional height:
 convert original-image.jpg -resize 100x converted-image.jpg
 

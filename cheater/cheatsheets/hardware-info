@@ -1,3 +1,7 @@
+# About
+# This cheatsheet collects informations about gathering hardware informations 
+
+
 # Display all hardware details
 sudo lshw
 

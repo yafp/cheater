@@ -1,4 +1,16 @@
-# Concatenate all pdf files into one:
+# About pdftk
+# PDFtk (short for PDF Toolkit) is a cross-platform tool for manipulating
+# Portable Document Format (PDF) documents.
+# It comes in two versions: PDFtk Free (open source) and PDFtk Pro
+# (proprietary paid).
+# Many functions are not available in the open-source version,
+# but only in the paid proprietary one.
+#
+# References:
+# https://en.wikipedia.org/wiki/PDFtk
+
+
+# Concatenate/merge all pdf files into one:
 pdftk *.pdf cat output all.pdf
 
 # Concatenate specific pdf files into one:

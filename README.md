@@ -8,8 +8,8 @@ remember.
 ![The obligatory xkcd](http://imgs.xkcd.com/comics/tar.png 'The obligatory xkcd')
 
 
-Example
--------
+# Example
+
 The next time you're forced to disarm a nuclear weapon without consulting
 Google, you may run:
 
@@ -20,7 +20,7 @@ cheater tar
 You will be presented with a cheatsheet resembling:
 
 ```sh
-# To extract an uncompressed archive: 
+# To extract an uncompressed archive:
 tar -xvf '/path/to/foo.tar'
 
 # To extract a .gz archive:
@@ -43,8 +43,8 @@ it is agnostic as to what content it stores. If you would like to use `cheater`
 to store notes on your favorite cookie recipes, feel free.
 
 
-Installing
-----------
+# Installation
+
 First, install the dependencies:
 
 ```sh
@@ -64,8 +64,8 @@ Lastly, `cd` into the cloned directory, then run:
 
 
 
-Modifying Cheatsheets
----------------------
+# Modifying Cheatsheets
+
 The value of `cheater` is that it allows you to create your own cheatsheets - the
 defaults are meant to serve only as a starting point, and can and should be
 modified.
@@ -77,7 +77,7 @@ in the `~/.cheater/tar` file.
 Provided that you have a `CHEAT_EDITOR`, `VISUAL`, or `EDITOR` environment
 variable set, you may edit cheatsheets with:
 
-sh
+```sh
 cheater -e foo
 ```
 
@@ -88,10 +88,9 @@ After you've customized your cheatsheets, I urge you to track `~/.cheater/` alon
 with your dotfiles.
 
 
-Configuring
------------
+# Configuring
 
-### Setting a DEFAULT_CHEAT_DIR ###
+### Setting a DEFAULT_CHEAT_DIR
 Personal cheatsheets are saved in the `~/.cheater` directory by default, but you
 can specify a different default by exporting a `DEFAULT_CHEATER_DIR` environment
 variable:
@@ -100,7 +99,7 @@ variable:
 export DEFAULT_CHEATER_DIR='/path/to/my/cheats'
 ```
 
-### Setting a CHEATERPATH ###
+### Setting a CHEATERPATH
 You can additionally instruct `cheater` to look for cheatsheets in other
 directories by exporting a `CHEATERPATH` environment variable:
 
@@ -116,7 +115,7 @@ export CHEATERPATH="$CHEATERPATH:/path/to/more/cheats"
 
 You may view which directories are on your `CHEATERPATH` with `cheater -d`.
 
-### Enabling Syntax Highlighting ###
+### Enabling Syntax Highlighting
 `cheater` can optionally apply syntax highlighting to your cheatsheets. To enable
 syntax highlighting, export a `CHEATERCOLORS` environment variable:
 
@@ -124,7 +123,7 @@ syntax highlighting, export a `CHEATERCOLORS` environment variable:
 export CHEATERCOLORS=true
 ```
 
-#### Specifying a Syntax Highlighter ####
+#### Specifying a Syntax Highlighter
 You may manually specify which syntax highlighter to use for each cheatsheet by
 wrapping the sheet's contents in a [Github-Flavored Markdown code-fence][gfm].
 
@@ -144,8 +143,8 @@ default.
 
 
 
-Credits
------------
+# Credits
+
 `cheater` is a fork of [Chris Allen Lane](https://github.com/chrisallenlane)'s wonderful project `cheat`.
 
 Please check it out: [https://github.com/chrisallenlane/cheat](https://github.com/chrisallenlane/cheat)

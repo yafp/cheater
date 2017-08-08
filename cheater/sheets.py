@@ -34,11 +34,13 @@ def default_path():
 
     # assert that the DEFAULT_CHEATER_DIR is readable and writable
     if not os.access(default_sheets_dir, os.R_OK):
-        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not readable.', 2)
+        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR (' + \
+            default_sheets_dir +') is not readable.', 2)
         die('The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not readable.')
 
     if not os.access(default_sheets_dir, os.W_OK):
-        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not writable.', 2)
+        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR (' + \
+            default_sheets_dir +') is not writable.', 2)
         die('The DEFAULT_CHEATER_DIR (' + default_sheets_dir +') is not writable.')
 
     # return the default dir
@@ -81,7 +83,8 @@ def paths():
                 sheet_paths.append(path)
 
     if not sheet_paths:
-        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR dir does not exist or the CHEATERPATH is not set.', 2)
+        u.debug_output(__name__, 'The DEFAULT_CHEATER_DIR dir does not exist \
+            or the CHEATERPATH is not set.', 2)
         die('The DEFAULT_CHEATER_DIR dir does not exist or the CHEATERPATH is not set.')
 
     return sheet_paths
@@ -100,13 +103,16 @@ def list():
     # store all sheet names and locations into sheet_list
     for sheet in sorted(get().items()):
         sheetcounter = sheetcounter + 1
-        sheet_list += sheet[0].ljust(pad_length) + sheet[1] + "\n"
+        #sheet_list += sheet[0].ljust(pad_length) + sheet[1] + "\n"
+        sheet_list += c.FONT_BLUE + c.FONT_BOLD + sheet[0].ljust(pad_length) + \
+            c.FONT_RESET + sheet[1] + "\n"
 
     # add header
     sheet_list = "CHEATSHEET".ljust(pad_length) + "LOCATION\n\n" + sheet_list
 
     # add footer
-    sheet_list = sheet_list + '\n\nFound '  + c.FONT_BOLD + c.FONT_GREEN + str(sheetcounter) + c.FONT_RESET+' cheatsheets.\n'
+    sheet_list = sheet_list + '\n\nFound '  + c.FONT_BOLD + c.FONT_GREEN + \
+        str(sheetcounter) + c.FONT_RESET+' cheatsheets.\n'
 
     u.debug_output(__name__, 'Found '+str(sheetcounter)+' cheatsheets')
 
@@ -120,7 +126,8 @@ def search(term):
 
     result = '' # string variable which contains the actual result-text
     sheetcounter = 0 # int variable to count amount of matching cheatsheets
-    linecounter = 0 # int variable to count occurences in single lines 
+    linecounter = 0 # int variable to count occurences in single lines
+    previous_comment_hit = False # boolean variable for #4
 
     u.debug_output(__name__, 'Starting search over all cheatsheets for the term: "'+ term +'"')
 
@@ -136,7 +143,8 @@ def search(term):
                 sheetscore = sheetscore + line.count(term)
 
                 # highlight search term in current line
-                highlight = c.FONT_BG_ORANGE + c.FONT_BLACK + term + c.FONT_RESET # contruct highlighted text
+                highlight = c.FONT_BG_ORANGE + c.FONT_BLACK + term + \
+                    c.FONT_RESET # contruct highlighted text
                 line = line.replace(term, highlight) # replace it
 
                 # attach line to match-text
@@ -145,24 +153,40 @@ def search(term):
                 # update result counter
                 linecounter = linecounter + line.count(term)
 
+                # Issue #4
+                if line.startswith('#'):
+                    previous_comment_hit = True
+                else:
+                    previous_comment_hit = False
+
+            else: # got no search hit in current line - see #4
+                # if the previous line was a comment and a search-match
+                # add the current line as well if it contains not another comment
+                if previous_comment_hit is True and not line.startswith('#') and len(line) > 1:
+                    match += '  ' + line
+                    previous_comment_hit = False
+
 
         # if we got a match - add name of related sheet and all lines which match
         if match != '':
             # Colored and including path to sheet
+            # name of cheatsheet + complete path to cheatsheet + maching lines in cheatsheet
             result += ' [' + c.FONT_GREEN + str(sheetscore)+ c.FONT_RESET + '] '+ \
                 c.FONT_BOLD + c.FONT_BLUE + cheatsheet[0] + ':' + \
                 c.FONT_RESET+ ' ('+ cheatsheet[1] +')\n' + \
-                match + '\n' # name of cheatsheet + complete path to cheatsheet + maching lines in cheatsheet
+                match + '\n'
 
             # update sheet counter
             sheetcounter = sheetcounter + 1
 
     u.debug_output(__name__, 'Finished search over all cheatsheets for the term: "' + term + '"')
-    u.debug_output(__name__, 'Found ' + str(linecounter) + ' matches in '+ str(sheetcounter) + ' cheatsheets')
+    u.debug_output(__name__, 'Found ' + str(linecounter) + ' matches in ' + \
+        str(sheetcounter) + ' cheatsheets')
 
     # add result footer
     result = result + '\n Your search for ' + c.FONT_BOLD + c.FONT_GREEN + term + c.FONT_RESET + \
         ' resulted in ' + c.FONT_BOLD + c.FONT_GREEN + str(linecounter) + c.FONT_RESET + \
-        ' matches in ' + c.FONT_BOLD+c.FONT_GREEN + str(sheetcounter) + c.FONT_RESET + ' cheatsheets\n\n'
+        ' matches in ' + c.FONT_BOLD+c.FONT_GREEN + str(sheetcounter) + \
+        c.FONT_RESET + ' cheatsheets\n\n'
 
     return result

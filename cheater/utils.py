@@ -20,11 +20,11 @@ def debug_output(source, message, message_type=0):
     """
     if c.DEBUG is True:
         # define message type & color
-        if(message_type == 2): # Error
+        if message_type == 2: # Error
             text_color = c.FONT_RED
             message_type_class = ' E '
 
-        elif(message_type == 1): # Warning
+        elif message_type == 1: # Warning
             text_color = c.FONT_YELLOW
             message_type_class = ' W '
 
@@ -36,7 +36,11 @@ def debug_output(source, message, message_type=0):
         timestamp = '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
 
         # output debug message
-        print(c.FONT_BOLD + c.FONT_RED + 'DEBUG: ' + c.FONT_RESET + text_color + message_type_class + c.FONT_RESET + " # " + c.FONT_GREEN + timestamp + c.FONT_RESET+' >> source: ' + c.FONT_PURPLE + source + c.FONT_RESET +' msg: '+ c.FONT_PURPLE + message + c.FONT_RESET)
+        print(c.FONT_BOLD + c.FONT_RED + 'DEBUG: ' + c.FONT_RESET + text_color + \
+            message_type_class + c.FONT_RESET + " # " + c.FONT_GREEN + \
+            timestamp + c.FONT_RESET+' >> source: ' + c.FONT_PURPLE + \
+            source + c.FONT_RESET +' msg: '+ c.FONT_PURPLE + message + \
+            c.FONT_RESET)
 
 
 def clear_terminal():
@@ -76,6 +80,18 @@ def colorize(sheet_content):
     debug_output(__name__, 'Finished colorizing')
 
     return highlight(sheet_content, lexer, TerminalFormatter())
+
+
+# Issue #2
+def print_header():
+    """ Prints a general cheater header """
+    debug_output(__name__, 'Function: print_header()')
+    print(c.FONT_YELLOW)
+    print("  ___  _  _  ____   __  ____  ____  ____ ")
+    print(" / __)/ )( \(  __) / _\(_  _)(  __)(  _ \\")
+    print("( (__ ) __ ( ) _) /    \ )(   ) _)  )   /")
+    print(" \___)\_)(_/(____)\_/\_/(__) (____)(__\_)")
+    print(c.FONT_RESET)
 
 
 def die(message):

@@ -90,9 +90,9 @@ def read(sheet):
     u.debug_output(__name__, 'Function: read()')
     if not exists(sheet): # sheet does not exist
         u.debug_output(__name__, 'Cheatsheet '+ sheet +' not found', 1)
-        die('No cheatsheet found with the name \
-            \033[01m'+c.FONT_BOLD + c.FONT_GREEN + sheet + c.FONT_RESET+'.\n')
+        die('No cheatsheet found with the name \033[01m'+c.FONT_BOLD + c.FONT_GREEN + sheet + c.FONT_RESET+'.\n')
 
     with open(path(sheet)) as cheatfile:
+        print c.FONT_BOLD+'Location: '+c.FONT_RESET + path(sheet) +'\n' # Issue #3
         u.debug_output(__name__, 'finished reading cheatsheet')
         return cheatfile.read()

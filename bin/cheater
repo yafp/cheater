@@ -1,5 +1,4 @@
 #!/usr/bin/env python
-
 """cheater - Create and view cheatsheets on the command line.
 
 Usage:
@@ -43,22 +42,24 @@ from cheater import sheets, sheet
 from cheater.utils import colorize
 from cheater.utils import debug_output
 from cheater.utils import clear_terminal
+from cheater.utils import print_header
 from docopt import docopt
 
 
 if __name__ == '__main__':
     clear_terminal()
+    print_header()
     debug_output(__name__, 'Function: __main__')
 
     # parse the command-line options
-    options = docopt(__doc__, version='cheater Version: 0.1.20170721')
-    debug_output(__name__, "____Options: "+str(options))
+    options = docopt(__doc__, version='Version: 0.1.20170808')
+    debug_output(__name__, '____Options: '+str(options))
 
     # list cheatsheet directories
     if options['--directories']:
         debug_output(__name__, 'Parameter: -d')
         print(c.FONT_BOLD +'The following cheatsheet directories are configured:\n'+c.FONT_RESET)
-        print("\n".join(sheets.paths())+'\n')
+        print('\n'.join(sheets.paths())+'\n')
 
     # list cheatsheets
     elif options['--list']:
